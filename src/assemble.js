@@ -6,13 +6,14 @@ let main = (dir,ext) => {
   index = JSON.parse(index);
 
   for (let i = 0; i < index.length; i++) {
-    console.log(`Restoring ${i + 1} of ${index.length}`);
+    console.log(`Restoring ${i + 1} of ${index.length} <- ${index[i]}`);
     let hexHead = index[i]
         .toString()
         .charAt(0) + index[i].toString().charAt(1);
-    let content = fs.readFileSync(path.join(dir, hexHead, index[i] + ".txt"));
+    let content = fs.readFileSync(path.join(dir, hexHead, index[i]));
     fs.appendFileSync("output."+ext, content);
   }
+  console.log("File restored")
 };
 
 module.exports = main;

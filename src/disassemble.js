@@ -21,21 +21,22 @@ let main = file => {
     if (!fs.existsSync(path.join(dir, hexHead))) {
       fs.mkdirSync(path.join(dir, hexHead));
     }
-    fs.writeFileSync(path.join(dir, hexHead, hex) + ".txt", content[i]);
+    fs.writeFileSync(path.join(dir, hexHead, hex), content[i]);
     ind.push(hex);
-    console.log(
-      i +
-        1 +
-        "/" +
-        content.length +
-        " written to " +
-        dir +
-        "/" +
-        hexHead +
-        "/" +
-        hex +
-        ".txt"
-    );
+    // console.log(
+    //   i +
+    //     1 +
+    //     "/" +
+    //     content.length +
+    //     " written to " +
+    //     dir +
+    //     "/" +
+    //     hexHead +
+    //     "/" +
+    //     hex +
+    //     ".txt"
+    // );
+    console.log(`Breaking ${i+1} of ${content.length} -> ${dir}/${hexHead}/${hex}`)
   }
   console.timeEnd("exec");
   fs.writeFile(path.join(dir, "index.json"), JSON.stringify(ind),(err)=>{
