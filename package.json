@@ -1,5 +1,16 @@
 {
   "dependencies": {
-    "uuid": "^3.1.0"
+    "uuid": "^3.1.0",
+    "zip-folder": "^1.0.0"
+  },
+  "name": "file-disassembler",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/ThisTNTSquid/file-disassembler.git",
+  "author": "ThisTNTSquid <tntsquid@corecrafted.net>",
+  "license": "MIT",
+  "scripts": {
+    "break": "node src/index.js disassemble",
+    "restore": "node src/index.js assemble"
   }
 }
