@@ -6,7 +6,7 @@ const dir = "./output";
 let ind = [];
 
 let main = file => {
-  var content = fs.readFileSync(file, "utf-8");
+  let content = fs.readFileSync(file, "utf-8");
 
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir);
