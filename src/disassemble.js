@@ -3,6 +3,8 @@ const fs = require("fs");
 const uuid = require("uuid/v4");
 const dir = "./output";
 
+let ind = [];
+
 let main = file => {
   var content = fs.readFileSync(file, "utf-8");
 
@@ -20,6 +22,7 @@ let main = file => {
       fs.mkdirSync(path.join(dir, hexHead));
     }
     fs.writeFileSync(path.join(dir, hexHead, hex) + ".txt", content[i]);
+    ind.push(hex);
     console.log(
       i +
         1 +
@@ -35,7 +38,15 @@ let main = file => {
     );
   }
   console.timeEnd("exec");
+  fs.writeFile(path.join(dir, "index.json"), JSON.stringify(ind),(err)=>{
+    if (err){
+      console.log('something went wrong while writing index')
+    } else {
+      console.log('Index successfully written in output')
+    }
+  });
+  
 };
 
-module.exports=main
+module.exports = main;
 // console.log(content);
