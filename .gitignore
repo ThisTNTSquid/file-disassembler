@@ -1,5 +1,6 @@
 # Output of the file
 output/*
+lorem.txt
 # Logs
 logs
 *.log

@@ -7,7 +7,7 @@ const assemble = require("./assemble");
 if (action == "disassemble") {
   disassemble(file);
 } else if (action == "assemble") {
-  assemble(file);
+  assemble(file,fileoutExtension);
 } else {
   console.log("Unknown Action: " + action);
 }
