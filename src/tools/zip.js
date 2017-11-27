@@ -1,7 +1,7 @@
-const zip=require('zip-folder')
+const EasyZip = require('easy-zip').EasyZip;
 
-zip('../../output','../../output.zip',(err)=>{
-  if (err){
-    console.log("Something went wrong with the zipping process")
-  }
+let zip = new EasyZip();
+
+zip.zipFolder('output/',function(){
+  zip.writeToFileSycn('out.zip')
 })

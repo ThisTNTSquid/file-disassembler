@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "uuid": "^3.1.0",
-    "zip-folder": "^1.0.0"
+    "easy-zip": "^0.0.4",
+    "uuid": "^3.1.0"
   },
   "name": "file-disassembler",
   "version": "1.0.0",
@@ -11,6 +11,7 @@
   "license": "MIT",
   "scripts": {
     "break": "node src/index.js disassemble",
-    "restore": "node src/index.js assemble"
+    "restore": "node src/index.js assemble",
+    "zip": "node src/tools/zip.js"
   }
 }
