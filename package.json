@@ -12,6 +12,7 @@
   "scripts": {
     "break": "node src/index.js disassemble",
     "restore": "node src/index.js assemble",
-    "zip": "node src/tools/zip.js"
+    "zip": "node src/tools/zip.js",
+    "test": "node src/test.js"
   }
 }
