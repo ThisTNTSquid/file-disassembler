@@ -1,7 +1,7 @@
 # File Disassembler
 Disassemble a text file into enormous amount of small files, and optionally reassemble it back (depend on the length of your file, the resulting file size could be up to 100 times) (also because of this, the disassembling speed is kind of slow)
 
-**DO NOT ATTEMPT TO DISASSEMBLE ANY NON TEXT FILES - This is a one way trip for non text files**, this script is not able to reassemble them once the file is disassembled
+**DO NOT ATTEMPT TO DISASSEMBLE ANY NON TEXT FILES - This is a one way trip for them**, this script is not able to reassemble them once the file is disassembled
 
 ## Prerequistes
 * [NodeJS](https://nodejs.org/en/) installed on your computer
