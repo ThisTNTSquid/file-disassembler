@@ -1,7 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 
-let main = (dir) => {
+let main = (dir,ext) => {
   let index = fs.readFileSync(path.join(dir, "index.json"));
   index = JSON.parse(index);
 
@@ -11,7 +11,7 @@ let main = (dir) => {
         .toString()
         .charAt(0) + index[i].toString().charAt(1);
     let content = fs.readFileSync(path.join(dir, hexHead, index[i] + ".txt"));
-    fs.appendFileSync("out.txt", content);
+    fs.appendFileSync("output."+ext, content);
   }
 };
 

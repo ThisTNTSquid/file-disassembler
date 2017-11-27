@@ -1,5 +1,6 @@
 const action = process.argv[2];
 const file = process.argv[3];
+const fileoutExtension =process.argv[4];
 const disassemble = require("./disassemble");
 const assemble = require("./assemble");
 
