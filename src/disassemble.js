@@ -15,6 +15,7 @@ let main = file => {
   content = content.split("");
 
   console.time("exec");
+  console.log("Disassembler started")
   for (let i = 0; i < content.length; i++) {
     let hex = uuid();
     let hexHead = hex.charAt(0) + hex.charAt(1);
@@ -34,6 +35,7 @@ let main = file => {
       console.log("Index successfully written in output");
     }
   });
+  console.log("Process completed")
 };
 
 module.exports = main;
