@@ -23,9 +23,7 @@ let main = file => {
     }
     ind.push(hex);
     fs.writeFile(path.join(dir, hexHead, hex), content[i], err => {
-      console.log(
-        `Broke ${i + 1} of ${content.length} -> ${dir}/${hexHead}/${hex}`
-      );
+      console.log(`Broke ${i + 1} of ${content.length} -> ${dir}/${hexHead}/${hex}`);
     });
   }
   console.timeEnd("exec");

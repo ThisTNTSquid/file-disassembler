@@ -9,6 +9,8 @@ if (!folder) {
 if (!output) {
   output = "output.zip";
 }
+console.log("Zipping content....")
 zip.zipFolder(folder, function() {
   zip.writeToFileSycn(output);
+  console.log("Zipping finished :)")
 });
