@@ -6,7 +6,7 @@ let main = (dir,ext) => {
   index = JSON.parse(index);
 
   for (let i = 0; i < index.length; i++) {
-    console.log(`Restoring ${i + 1} of ${index.length} <- ${index[i]}`);
+    console.log(`Restored ${i + 1} of ${index.length} <- ${index[i]}`);
     let hexHead = index[i]
         .toString()
         .charAt(0) + index[i].toString().charAt(1);

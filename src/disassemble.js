@@ -21,32 +21,21 @@ let main = file => {
     if (!fs.existsSync(path.join(dir, hexHead))) {
       fs.mkdirSync(path.join(dir, hexHead));
     }
-    fs.writeFileSync(path.join(dir, hexHead, hex), content[i]);
     ind.push(hex);
-    // console.log(
-    //   i +
-    //     1 +
-    //     "/" +
-    //     content.length +
-    //     " written to " +
-    //     dir +
-    //     "/" +
-    //     hexHead +
-    //     "/" +
-    //     hex +
-    //     ".txt"
-    // );
-    console.log(`Breaking ${i+1} of ${content.length} -> ${dir}/${hexHead}/${hex}`)
+    fs.writeFile(path.join(dir, hexHead, hex), content[i], err => {
+      console.log(
+        `Broke ${i + 1} of ${content.length} -> ${dir}/${hexHead}/${hex}`
+      );
+    });
   }
   console.timeEnd("exec");
-  fs.writeFile(path.join(dir, "index.json"), JSON.stringify(ind),(err)=>{
-    if (err){
-      console.log('something went wrong while writing index')
+  fs.writeFile(path.join(dir, "index.json"), JSON.stringify(ind), err => {
+    if (err) {
+      console.log("something went wrong while writing index");
     } else {
-      console.log('Index successfully written in output')
+      console.log("Index successfully written in output");
     }
   });
-  
 };
 
 module.exports = main;
